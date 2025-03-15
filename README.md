@@ -1,1 +1,0 @@
-# DaryaFakhretdinova.github.io

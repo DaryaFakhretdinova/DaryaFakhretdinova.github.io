@@ -1,0 +1,796 @@
+/* Основные стили */
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    color: #333;
+    background-color: #f9f9f9;
+    transition: background-color 0.5s ease, color 0.5s ease;
+}
+
+/* Тёмная тема */
+body.dark-theme {
+    background-color: #1a1a1a;
+    color: #f0f0f0;
+}
+
+body.dark-theme .section::before {
+    background: linear-gradient(135deg, #2c3e50 0%, #1a1a1a 100%);
+}
+
+body.dark-theme .skill-item,
+body.dark-theme .portfolio-item,
+body.dark-theme .contact-link {
+    background-color: #2c3e50;
+    color: #f0f0f0;
+}
+
+body.dark-theme .section-title,
+body.dark-theme .portfolio-item-title,
+body.dark-theme .skill-item h3 {
+    color: #f0f0f0;
+}
+
+body.dark-theme .section-text,
+body.dark-theme .portfolio-item-text {
+    color: #ddd;
+}
+
+body.dark-theme .badge {
+    background-color: #3498db;
+    color: #fff;
+}
+
+/* Переключатель темы */
+#themeToggle {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    cursor: pointer;
+    z-index: 1000;
+    font-size: 24px;
+    background: none;
+    border: none;
+    padding: 0;
+    color: inherit;
+}
+
+#themeIcon {
+    display: inline-block;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+/* Стили для тёмной темы */
+body.dark-theme #themeIcon {
+    content: "🌙";
+}
+
+/* Анимация при наведении */
+#themeToggle:hover #themeIcon {
+    transform: scale(1.1);
+    opacity: 0.8;
+}
+
+/* Фоновые изображения для секций */
+.section {
+    position: relative;
+    padding: 100px 0;
+    overflow: hidden;
+}
+
+.container {
+    position: relative;
+    z-index: 1;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    box-sizing: border-box;
+}
+
+/* Шапка */
+.header {
+    background-color: #2c3e50;
+    color: #fff;
+    padding: 60px 0;
+    text-align: center;
+}
+
+.profile-photo {
+    width: 150px;
+    height: 150px;
+    margin: 0 auto 20px;
+    border-radius: 50%;
+    overflow: hidden;
+    border: 4px solid #3498db;
+}
+
+.profile-photo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.header-title {
+    font-size: 2.5rem;
+    margin: 0;
+}
+
+.header-subtitle {
+    font-size: 1.2rem;
+    margin: 10px 0 0;
+}
+
+.nav-list {
+    list-style: none;
+    padding: 0;
+    margin: 20px 0 0;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.nav-item {
+    margin: 0;
+}
+
+.nav-link {
+    color: #fff;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.nav-link:hover {
+    text-decoration: underline;
+}
+
+/* Заголовки секций */
+.section-title {
+    font-size: 2.5rem;
+    margin-bottom: 40px;
+    text-align: center;
+    color: #2c3e50;
+    animation: fadeIn 1s ease-out;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.section-text {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto;
+    color: #555;
+}
+
+/* Навыки */
+.skills-grid {
+    display: flex;
+    justify-content: center;
+}
+
+.skill-item {
+    width: 100%;
+    max-width: 800px;
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.skill-item h3 {
+    font-size: 1.8rem;
+    margin-bottom: 20px;
+    color: #2c3e50;
+}
+
+.skill-badges {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center;
+}
+
+.badge {
+    background-color: #3498db;
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 1rem;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.badge i {
+    font-size: 1.2rem;
+}
+
+/* Портфолио */
+.portfolio-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    justify-content: center;
+}
+
+.portfolio-item {
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    width: calc(50% - 30px);
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.portfolio-item:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+.portfolio-item-title {
+    font-size: 1.8rem;
+    margin: 0 0 20px;
+    color: #2c3e50;
+}
+
+.portfolio-item-text {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: #555;
+}
+
+.portfolio-item-button {
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #3498db;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.3s ease;
+}
+
+.portfolio-item-button:hover {
+    background-color: #2980b9;
+}
+
+/* Контакты */
+.contact-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.contact-link {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 15px 30px;
+    border-radius: 8px;
+    text-decoration: none;
+    color: #fff;
+    background-color: #3498db;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+    font-size: 1.1rem;
+    border: 1px solid transparent;
+    box-sizing: border-box;
+}
+
+.contact-link i {
+    font-size: 1.3rem;
+}
+
+.contact-link:hover {
+    transform: translateY(-3px);
+    background-color: #2980b9;
+}
+
+/* Подвал */
+.footer {
+    background-color: #2c3e50;
+    color: #fff;
+    text-align: center;
+    padding: 40px 0;
+}
+
+.footer-text {
+    margin: 0;
+    font-size: 0.9rem;
+}
+
+/* Модальное окно */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    backdrop-filter: blur(5px);
+    overflow: auto;
+}
+
+.modal-content {
+    background-color: #fff;
+    margin: 10% auto;
+    padding: 30px;
+    border-radius: 10px;
+    width: 80%;
+    max-width: 800px;
+    position: relative;
+    animation: fadeIn 0.3s ease-out;
+    max-height: 80vh;
+    overflow-y: auto;
+}
+
+.modal-close {
+    position: absolute;
+    top: 15px;
+    right: 20px;
+    font-size: 36px;
+    font-weight: bold;
+    color: #333;
+    cursor: pointer;
+    transition: color 0.3s ease;
+    background-color: rgba(255, 255, 255, 0.8);
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1001;
+}
+
+.modal-close:hover {
+    color: #3498db;
+}
+
+.modal-flex {
+    display: flex;
+    align-items: flex-start;
+    gap: 30px;
+}
+
+.modal-image {
+    width: 40%;
+    max-height: 60vh;
+    object-fit: contain;
+    border-radius: 10px;
+}
+
+.modal-text {
+    width: 60%;
+    overflow-y: auto;
+    max-height: 60vh;
+}
+
+/* Адаптация для мобильных устройств */
+@media (max-width: 768px) {
+    .section {
+        padding: 60px 0;
+    }
+
+    .header {
+        padding: 40px 0;
+    }
+
+    .header-title {
+        font-size: 2rem;
+    }
+
+    .header-subtitle {
+        font-size: 1rem;
+    }
+
+    .nav-list {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .contact-links {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .contact-link {
+        width: 100%;
+        justify-content: center;
+        padding: 12px 20px;
+        font-size: 1rem;
+        border: 1px solid rgba(255, 255, 255, 0.2);
+    }
+
+    .skill-badges {
+        gap: 8px;
+    }
+
+    .badge {
+        padding: 8px 15px;
+        font-size: 0.9rem;
+    }
+
+    .portfolio-grid {
+        flex-direction: column;
+        gap: 20px;
+        padding: 0 0px; /* Добавляем отступы по бокам */
+    }
+
+    .portfolio-item {
+        width: 100%;
+        padding: 20px;
+        border: 1px solid rgba(0, 0, 0, 0.1);
+        box-sizing: border-box;
+    }
+
+    .portfolio-item-title {
+        font-size: 1.5rem;
+    }
+
+    .portfolio-item-text {
+        font-size: 1rem;
+    }
+
+    #themeToggle {
+        top: 10px;
+        right: 10px;
+        font-size: 20px;
+    }
+
+    .modal-content {
+        width: 90%;
+        margin: 20% auto;
+        padding: 20px;
+    }
+
+    .modal-flex {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .modal-image {
+        width: 100%;
+        max-height: 40vh;
+    }
+
+    .modal-text {
+        width: 100%;
+        max-height: 40vh;
+    }
+
+    .modal-close {
+        top: 10px;
+        right: 10px;
+        font-size: 28px;
+    }
+}
+
+@media (max-width: 480px) {
+    .header-title {
+        font-size: 1.8rem;
+    }
+
+    .header-subtitle {
+        font-size: 0.9rem;
+    }
+
+    .section-title {
+        font-size: 2rem;
+    }
+
+    .section-text {
+        font-size: 1rem;
+    }
+
+    .skill-item h3 {
+        font-size: 1.5rem;
+    }
+
+    .badge {
+        padding: 6px 12px;
+        font-size: 0.8rem;
+    }
+
+    .contact-link {
+        font-size: 0.9rem;
+    }
+}
+
+/* Модальное окно в тёмной теме */
+body.dark-theme .modal-content {
+    background-color: #2c3e50; /* Тёмный фон для модального окна */
+    color: #f0f0f0; /* Светлый текст */
+}
+
+body.dark-theme .modal-close {
+    color: #f0f0f0; /* Светлый крестик */
+    background-color: rgba(0, 0, 0, 0.8); /* Тёмный фон для крестика */
+}
+
+body.dark-theme .modal-close:hover {
+    color: #3498db; /* Цвет крестика при наведении */
+}
+
+body.dark-theme .modal-text {
+    color: #f0f0f0; /* Светлый текст в модальном окне */
+}
+
+body.dark-theme .portfolio-item-button {
+    background-color: #3498db; /* Цвет кнопки "Подробнее" в тёмной теме */
+    color: #fff; /* Белый текст на кнопке */
+}
+
+body.dark-theme .portfolio-item-button:hover {
+    background-color: #2980b9; /* Цвет кнопки при наведении */
+}
+
+/* Модальное окно */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    backdrop-filter: blur(5px);
+    overflow: auto;
+}
+
+.modal-content {
+    background-color: #fff;
+    margin: 10% auto;
+    padding: 70px 30px 30px 30px;
+    border-radius: 10px;
+    width: 80%;
+    max-width: 800px;
+    position: relative;
+    animation: fadeIn 0.3s ease-out;
+    max-height: 80vh;
+    overflow-y: auto;
+}
+
+/* Убираем полосу прокрутки у body при открытом модальном окне */
+body.modal-open {
+    overflow: hidden;
+}
+
+.modal-flex {
+    display: flex;
+    align-items: flex-start;
+    gap: 30px;
+}
+
+.modal-image {
+    width: 40%;
+    max-height: 60vh;
+    object-fit: contain;
+    border-radius: 10px;
+    overflow: hidden; /* Обрезаем картинку, если она выходит за пределы */
+}
+
+/* Адаптация для мобильных устройств */
+@media (max-width: 768px) {
+    .modal-flex {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .modal-image {
+        width: 100%;
+        max-height: 40vh;
+    }
+}
+
+.modal-text {
+    width: 100%;
+    max-height: 60vh;
+    overflow-y: auto;
+    padding-right: 10px; /* Отступ для ползунка */
+}
+
+/* Стилизация ползунка */
+.modal-text::-webkit-scrollbar {
+    width: 8px; /* Ширина ползунка */
+}
+
+.modal-text::-webkit-scrollbar-track {
+    background: #f1f1f1; /* Цвет фона ползунка */
+    border-radius: 4px;
+}
+
+.modal-text::-webkit-scrollbar-thumb {
+    background: #888; /* Цвет ползунка */
+    border-radius: 4px;
+}
+
+.modal-text::-webkit-scrollbar-thumb:hover {
+    background: #555; /* Цвет ползунка при наведении */
+}
+
+.modal-image {
+    width: 100%;
+    max-height: 60vh;
+    object-fit: contain;
+    border-radius: 10px;
+    border: 2px solid #3498db; /* Рамка вокруг картинки */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Тень для выделения */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer; /* Курсор-указатель для интерактивности */
+}
+
+.modal-image:hover {
+    transform: scale(1.05); /* Увеличение при наведении */
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3); /* Усиление тени при наведении */
+/* Стили для картинки в модальном окне */
+.modal-image {
+    width: 100%;
+    max-height: 60vh;
+    object-fit: contain;
+    border-radius: 10px;
+    border: 2px solid #3498db;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    display: block; /* Убедимся, что картинка отображается как блок */
+    margin: 0 auto; /* Центрируем картинку */
+}
+
+/* Стили для ссылки вокруг картинки */
+.modal-flex a {
+    display: block; /* Ссылка занимает всю ширину контейнера */
+    text-align: center; /* Центрируем содержимое */
+}
+
+/* Модальное окно */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    backdrop-filter: blur(5px);
+    overflow: auto;
+}
+
+.modal-content {
+    background-color: #fff;
+    margin: 5% auto; /* Уменьшаем отступ сверху */
+    padding: 30px;
+    border-radius: 10px;
+    width: 80%;
+    max-width: 800px;
+    position: relative;
+    animation: fadeIn 0.3s ease-out;
+    max-height: 90vh; /* Увеличиваем высоту модального окна */
+    overflow-y: auto;
+}
+
+/* Крестик */
+.modal-close {
+    position: absolute;
+    top: 10px; /* Поднимаем крестик выше */
+    right: 20px;
+    font-size: 36px;
+    font-weight: bold;
+    color: #333;
+    cursor: pointer;
+    transition: color 0.3s ease;
+    background-color: rgba(255, 255, 255, 0.9); /* Фон для крестика */
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1001; /* Крестик выше ползунка */
+}
+
+.modal-close:hover {
+    color: #3498db; /* Цвет крестика при наведении */
+}
+
+/* Контейнер для картинки и текста */
+.modal-flex {
+    display: flex;
+    align-items: flex-start;
+    gap: 30px;
+}
+
+/* Картинка */
+.modal-image {
+    width: 40%;
+    max-height: 60vh;
+    object-fit: contain;
+    border-radius: 10px;
+    border: 2px solid #3498db;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.modal-image:hover {
+    transform: scale(1.05); /* Увеличение картинки при наведении */
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+}
+
+/* Текст в модальном окне */
+.modal-text {
+    width: 60%;
+    max-height: 60vh; /* Уменьшаем высоту текстового блока */
+    overflow-y: auto;
+    padding-right: 20px; /* Увеличиваем отступ для ползунка */
+    padding-top: 20px; /* Добавляем отступ сверху */
+}
+
+/* Ползунок */
+.modal-text::-webkit-scrollbar {
+    width: 6px; /* Уменьшаем ширину ползунка */
+}
+
+.modal-text::-webkit-scrollbar-track {
+    background: #f1f1f1; /* Цвет фона ползунка */
+    border-radius: 4px;
+}
+
+.modal-text::-webkit-scrollbar-thumb {
+    background: #888; /* Цвет ползунка */
+    border-radius: 4px;
+}
+
+.modal-text::-webkit-scrollbar-thumb:hover {
+    background: #555; /* Цвет ползунка при наведении */
+}
+
+/* Адаптация для мобильных устройств */
+@media (max-width: 768px) {
+    .modal-content {
+        width: 90%;
+        margin: 10% auto;
+        padding: 20px;
+    }
+
+    .modal-flex {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .modal-image {
+        width: 100%;
+        max-height: 40vh;
+    }
+
+    .modal-text {
+        width: 100%;
+        max-height: 40vh;
+    }
+
+    .modal-close {
+        top: 5px;
+        right: 10px;
+        font-size: 28px;
+    }
+}

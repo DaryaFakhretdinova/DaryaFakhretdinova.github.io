@@ -1,69 +1,298 @@
 <!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link href="./normalize.css" rel="stylesheet" />
-    <link href="./style.css" rel="stylesheet" />
-    <link rel="icon" type="image/x-icon" href="favicon.ico">
-    <title>Document</title>
-  </head>
-  <body>
-    <header class="header">
-      <img src="./avatar.png" alt="avatar" class="header__avatar" />
-      <h1 class="header__title">Дарья Фахретдинова</h1>
-      <h3 class="header__subtitle">QA engineer</h3>
-    </header>
-    <main>
-      <section class="links">
-        <h2 class="links__header">Связаться со мной</h2>
-        <ul class="links__container">
-          <li class="links__link">
-            <p class="links__title">Телеграм</p>
-            <a class="linsk__link" href="http://t.me/DashaFakhretdinova">@DashaFakhretdinova</a>
-          </li>
-          <li class="links__link">
-            <p class="links__title">Эл. почта</p>
-            <a class="linsk__link" href="mailto:fakhretdinova1991@gmail.com"
-              >fakhretdinova1991@gmail.com</a
-            >
-          </li>
-          <li class="links__link">
-            <p class="links__title">Гит</p>
-            <a class="linsk__link" href="https://github.com/DaryaFakhretdinova/">https://github.com/DaryaFakhretdinova</a>
-          </li>
-        </ul>
-      </section>
-      <section class="links">
-        <h2 class="links__header">Мои увлечения</h2>
-        <ul class="links__container">
-          <li class="links__link">
-            <p class="links__title">Изучаю</p>
-            <a class="linsk__link" href="https://www.python.org/">Python</a>
-          </li>
-          <li class="links__link">
-            <p class="links__title">Танцую</p>
-            <a class="linsk__link" href="https://ru.wikipedia.org/wiki/%D0%9A%D0%BE%D0%BD%D1%82%D0%B5%D0%BC%D0%BF%D0%BE%D1%80%D0%B0%D1%80%D0%B8">Contemporary</a>
-          </li>
-          <li class="links__link">
-            <p class="links__title">Рисую</p>
-            <a class="linsk__link" href="https://artkvartal.ru/tutorials/tempera-istoriya-i-osobennosti-materiala/">Темперой</a>
-          </li>
-          <li class="links__link">
-            <p class="links__title">Читаю</p>
-            <a class="linsk__link" href="https://www.google.com/search?newwindow=1&sca_esv=b29615993d3557e4&sxsrf=AHTn8zrgLNY-apZuMh5R2C4KjWdXsLjMjA:1741359344341&q=%D0%B1%D1%83%D0%BC%D0%B0%D0%B6%D0%BD%D1%8B%D0%B5+%D0%BA%D0%BD%D0%B8%D0%B3%D0%B8&udm=2&fbs=ABzOT_BNihz2JOeDuXVH-1rJM1_QcpwgQLdkRaO-cHvfcmCXpa6JlJlSSEMB791UcZq5cpSGPgOsufTyOGqHq3HVmz3gm_x5_9aV0E8RfPdz1wPv40LDlJ-FamarP4_ledr1vTj5N-QqTO163eJpnVuPXQJSKL3Z-y5EfCDhLu7wYYW_NMu-Bd8Sefk50_pT2GpECsiE_O4kLFGDYkYPhyWQUQY9MUgVweV7YFcZ5R-7-bEiyoO8spA&sa=X&sqi=2&ved=2ahUKEwig5pSJnfiLAxVCKhAIHWFRKsUQtKgLegQIExAB&biw=1920&bih=953&dpr=1">Бумажные книги 😊</a>
-          </li>
-        </ul>
-      </section>
-    </main>
-  <footer>
-    <div id="credo-text" class="credo-text hidden">
-      Учиться никогда не поздно, особенно если это делает мир лучше.
-    </div>
-    <button type="button" class="button-link" data-text="Моё кредо">Моё кредо</button>
-  </footer>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QA Engineer - Фахретдинова Дарья</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <!--  Переключатель темы  -->
+    <button id="themeToggle">
+        <span id="themeIcon">🌞</span>
+    </button>
 
-    <script type="text/javascript" src="js.js"></script>
-  </body>
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <div class="profile-photo">
+                    <img src="avatar.png" alt="Фахретдинова Дарья">
+                </div>
+                <h1 class="header-title">Фахретдинова Дарья</h1>
+                <p class="header-subtitle">QA Engineer</p>
+                <nav class="nav">
+                    <ul class="nav-list">
+                        <li class="nav-item"><a href="#about" class="nav-link">Обо мне</a></li>
+                        <li class="nav-item"><a href="#skills" class="nav-link">Навыки</a></li>
+                        <li class="nav-item"><a href="#portfolio" class="nav-link">Портфолио</a></li>
+                        <li class="nav-item"><a href="#contact" class="nav-link">Контакты</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <!-- Секции -->
+    <section id="about" class="section about">
+        <div class="container">
+            <h2 class="section-title" data-aos="fade-up">Обо мне</h2>
+            <p class="section-text" data-aos="fade-up" data-aos-delay="100">
+                Привет! Меня зовут Фахретдинова Дарья, и я начинающая ручная тестировщица.<br>
+                Моя цель — обеспечить высокое качество программного обеспечения, выявляя и устраняя ошибки на ранних этапах разработки.
+            </p>
+        </div>
+    </section>
+
+    <section id="skills" class="section skills">
+        <div class="container">
+            <h2 class="section-title" data-aos="fade-up">Навыки</h2>
+            <div class="skills-grid" data-aos="fade-up" data-aos-delay="100">
+                <div class="skill-item">
+                    <h3>Тестирование</h3>
+                    <div class="skill-badges">
+                        <span class="badge"><i class="fas fa-bug"></i> Ручное тестирование</span>
+                        <span class="badge"><i class="fas fa-list"></i> Тест-кейсы</span>
+                        <span class="badge"><i class="fas fa-check"></i> Чек-листы</span>
+                        <span class="badge"><i class="fas fa-exclamation"></i> Баг-репорты</span>
+                        <span class="badge"><i class="fas fa-toolbox"></i> Postman</span>
+                        <span class="badge"><i class="fas fa-tasks"></i> Jira</span>
+                        <span class="badge"><i class="fas fa-tasks"></i> Яндекс.Трекер</span>
+                        <span class="badge"><i class="fas fa-vial"></i> Test IT</span>
+                        <span class="badge"><i class="fas fa-chart-line"></i> Kibana</span>
+                        <span class="badge"><i class="fas fa-bug"></i> Sentry</span>
+                        <span class="badge"><i class="fas fa-search"></i> Jaeger</span>
+                        <span class="badge"><i class="fas fa-chart-bar"></i> Metabase</span>
+                        <span class="badge"><i class="fas fa-database"></i> DBeaver</span>
+                        <span class="badge"><i class="fab fa-github"></i> GitHub</span>
+                        <span class="badge"><i class="fab fa-gitlab"></i> GitLab CI/CD</span>
+                        <span class="badge"><i class="fas fa-network-wired"></i> Charles</span>
+                        <span class="badge"><i class="fas fa-tools"></i> DevTools</span>
+                        <span class="badge"><i class="fas fa-code"></i> Kafka</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="portfolio" class="section portfolio">
+        <div class="container">
+            <h2 class="section-title" data-aos="fade-up">Портфолио</h2>
+            <div class="portfolio-grid">
+                <!-- Проект 1 -->
+                <div class="portfolio-item" data-aos="fade-right" data-aos-delay="100">
+                    <h3 class="portfolio-item-title">Обучение QA Studio</h3>
+                    <p class="portfolio-item-text">Полная информация об обучении</p>
+                    <button class="portfolio-item-button" data-modal="modal1">Подробнее</button>
+                </div>
+                <!-- Проект 2 -->
+                <div class="portfolio-item" data-aos="fade-left" data-aos-delay="200">
+                    <h3 class="portfolio-item-title">Стажировка №1</h3>
+                    <p class="portfolio-item-text">Описание проекта №1.</p>
+                    <button class="portfolio-item-button" data-modal="modal2">Подробнее</button>
+                </div>
+                                <!-- Проект 3 -->
+                <div class="portfolio-item" data-aos="fade-right" data-aos-delay="200">
+                    <h3 class="portfolio-item-title">Стажировка №2</h3>
+                    <p class="portfolio-item-text">Описание проекта №2.</p>
+                    <button class="portfolio-item-button" data-modal="modal3">Подробнее</button>
+                </div>
+                                <!-- Проект 4 -->
+                <div class="portfolio-item" data-aos="fade-left" data-aos-delay="200">
+                    <h3 class="portfolio-item-title">Стажировка №3</h3>
+                    <p class="portfolio-item-text">Описание проекта №3</p>
+                    <button class="portfolio-item-button" data-modal="modal4">Подробнее</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="section contact">
+        <div class="container">
+            <h2 class="section-title" data-aos="fade-up">Контакты</h2>
+            <div class="contact-links" data-aos="fade-up" data-aos-delay="100">
+                <a href="https://t.me/DashaFakhretdinova" class="contact-link" target="_blank">
+                    <i class="fab fa-telegram-plane"></i>
+                    Telegram
+                </a>
+                <a href="mailto:fakhretdinova1991@gmail.com" class="contact-link" target="_blank">
+                    <i class="far fa-envelope"></i>
+                    Эл. почта
+                </a>
+                <a href="https://github.com/DaryaFakhretdinova" class="contact-link" target="_blank">
+                    <i class="fab fa-github"></i>
+                    GitHub
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <p class="footer-text">&copy; 2025 Фахретдинова Дарья. Все права защищены :)</p>
+        </div>
+    </footer>
+
+    <!-- Модальные окна -->
+    <!-- Модальное окно для проекта 1 -->
+    <div id="modal1" class="modal">
+        <div class="modal-content">
+            <span class="modal-close">&times;</span>
+            <div class="modal-flex">
+                <a href="diplom.png" target="_blank" rel="noopener noreferrer">
+                    <img src="diplom.png" alt="Проект 1" class="modal-image">
+                </a>
+                <div class="modal-text">
+                    <h3>Обучение в QA studio</h3>
+                    <p>Вот такой вот стек мы изучали</p>
+                    <ul>
+                        <li>Перечень того что выучила на данном курсе</li>
+                        <li>Перечень того что выучила на данном курсе</li>
+                        <li>Перечень того что выучила на данном курсе</li>
+                        <li>Перечень того что выучила на данном курсе</li>
+                        <li>Перечень того что выучила на данном курсе</li>
+                        <li>Перечень того что выучила на данном курсе</li>
+                        <li>Перечень того что выучила на данном курсе</li>
+                        <li>Перечень того что выучила на данном курсе</li>
+                        <li>Перечень того что выучила на данном курсе</li>
+                        <li>Перечень того что выучила на данном курсе</li>
+                        <li>Перечень того что выучила на данном курсе</li>
+                        <li>Перечень того что выучила на данном курсе</li>
+                        <li>Перечень того что выучила на данном курсе</li>
+                        <li>Перечень того что выучила на данном курсе</li>
+                        <li>Перечень того что выучила на данном курсе</li>
+                        <li>Перечень того что выучила на данном курсе</li>
+                        <li>Перечень того что выучила на данном курсе</li>
+                        <li>Перечень того что выучила на данном курсе</li>
+                        <li>Перечень того что выучила на данном курсе</li>
+                        <li>Перечень того что выучила на данном курсе</li>
+                        <li>Перечень того что выучила на данном курсе</li>
+                        <li>Перечень того что выучила на данном курсе</li>
+                        <li>Перечень того что выучила на данном курсе</li>
+                        <li>Перечень того что выучила на данном курсе</li>
+                        <li>Перечень того что выучила на данном курсе</li>
+                        <li>Перечень того что выучила на данном курсе</li>
+                        <li>Перечень того что выучила на данном курсе</li>  
+
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Модальное окно для проекта 2 -->
+    <div id="modal2" class="modal">
+        <div class="modal-content">
+            <span class="modal-close">&times;</span>
+            <div class="modal-flex">
+                <a href="project_1.png" target="_blank" rel="noopener noreferrer">
+                    <img src="project_1.png" alt="Проект 1" class="modal-image">
+                </a>
+                <div class="modal-text">
+                    <h3>1 стажировка</h3>
+                    <p>Обязанности, которые я выполнял на проекте:</p>
+                    <ul>
+                        <li>Задачи которые я выполняла на прокте.</li>
+                        <li>Задачи которые я выполняла на прокте.</li>
+                        <li>Задачи которые я выполняла на прокте.</li>
+                        <li>Задачи которые я выполняла на прокте.</li>
+                        <li>Задачи которые я выполняла на прокте.</li>
+                        <li>Задачи которые я выполняла на прокте.</li>
+                        <li>Задачи которые я выполняла на прокте.</li>
+                        <li>Задачи которые я выполняла на прокте.</li>
+                        <li>Задачи которые я выполняла на прокте.</li>
+                        <li>Задачи которые я выполняла на прокте.</li>
+                        <li>Задачи которые я выполняла на прокте.</li>
+                        <li>Задачи которые я выполняла на прокте.</li>
+                        <li>Задачи которые я выполняла на прокте.</li>
+                        <li>Задачи которые я выполняла на прокте.</li>
+                        <li>Задачи которые я выполняла на прокте.</li>
+                        <li>Задачи которые я выполняла на прокте.</li>
+                        <li>Задачи которые я выполняла на прокте.</li>
+                        <li>Задачи которые я выполняла на прокте.</li>
+
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Модальное окно для проекта 2 -->
+    <div id="modal3" class="modal">
+        <div class="modal-content">
+            <span class="modal-close">&times;</span>
+            <div class="modal-flex">
+                <a href="project_1.png" target="_blank" rel="noopener noreferrer">
+                    <img src="project_1.png" alt="Проект 2" class="modal-image">
+                </a>
+                <div class="modal-text">
+                    <h3>2 стажировка</h3>
+                    <p>Обязанности, которые я выполнял на проекте:</p>
+                    <ul>
+                        <li>Задачи которые я выполняла на прокте.</li>
+                        <li>Задачи которые я выполняла на прокте.</li>
+                        <li>Задачи которые я выполняла на прокте.</li>
+                        <li>Задачи которые я выполняла на прокте.</li>
+                        <li>Задачи которые я выполняла на прокте.</li>
+                        <li>Задачи которые я выполняла на прокте.</li>
+                        <li>Задачи которые я выполняла на прокте.</li>
+                        <li>Задачи которые я выполняла на прокте.</li>
+                        <li>Задачи которые я выполняла на прокте.</li>
+                        <li>Задачи которые я выполняла на прокте.</li>
+                        <li>Задачи которые я выполняла на прокте.</li>
+                        <li>Задачи которые я выполняла на прокте.</li>
+                        <li>Задачи которые я выполняла на прокте.</li>
+                        <li>Задачи которые я выполняла на прокте.</li>
+                        <li>Задачи которые я выполняла на прокте.</li>
+                        <li>Задачи которые я выполняла на прокте.</li>
+                        <li>Задачи которые я выполняла на прокте.</li>
+                        <li>Задачи которые я выполняла на прокте.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Модальное окно для проекта 3 -->
+    <div id="modal4" class="modal">
+        <div class="modal-content">
+            <span class="modal-close">&times;</span>
+            <div class="modal-flex">
+                <a href="project_1.png" target="_blank" rel="noopener noreferrer">
+                    <img src="project_1.png" alt="Проект 3" class="modal-image">
+                </a>
+                <div class="modal-text">
+                    <h3>3 стажировка</h3>
+                    <p>Обязанности, которые я выполнял на проекте:</p>
+                    <ul>
+                        <li>Задачи которые я выполняла на прокте.</li>
+                        <li>Задачи которые я выполняла на прокте.</li>
+                        <li>Задачи которые я выполняла на прокте.</li>
+                        <li>Задачи которые я выполняла на прокте.</li>
+                        <li>Задачи которые я выполняла на прокте.</li>
+                        <li>Задачи которые я выполняла на прокте.</li>
+                        <li>Задачи которые я выполняла на прокте.</li>
+                        <li>Задачи которые я выполняла на прокте.</li>
+                        <li>Задачи которые я выполняла на прокте.</li>
+                        <li>Задачи которые я выполняла на прокте.</li>
+                        <li>Задачи которые я выполняла на прокте.</li>
+                        <li>Задачи которые я выполняла на прокте.</li>
+                        <li>Задачи которые я выполняла на прокте.</li>
+                        <li>Задачи которые я выполняла на прокте.</li>
+                        <li>Задачи которые я выполняла на прокте.</li>
+                        <li>Задачи которые я выполняла на прокте.</li>
+                        <li>Задачи которые я выполняла на прокте.</li>
+                        <li>Задачи которые я выполняла на прокте.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- Подключаем библиотеку для анимаций -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <script src="script.js"></script>
+</body>
 </html>
